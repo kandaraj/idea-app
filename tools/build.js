@@ -20,7 +20,7 @@ compiler.run((error,stats) => {
   const jsonStats = stats.toJson();
 
   if (jsonStats.hasErrors) {
-    return jsonStats.errors.map(error => console.log(chalkError(error)));
+    return jsonStats.errors.map(error => console.log(error));
   }
 
   if (jsonStats.hasWarnings) {
